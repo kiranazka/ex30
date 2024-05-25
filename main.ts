@@ -1,19 +1,16 @@
-let userNames = ["Azka","Kamran","Kinza","Admin","Ahmad"];
-
-userNames = []
-// Using lenght user Name 
-    if (userNames.length == 0){
- console.log("\n Your Array in Empty We need to find some users!\n");
-    }
-else{
-    // Using ForEach loop Array
-    userNames.forEach(oneUser => {
-        if(oneUser === "Admin"){
-            console.log(`Hello ${oneUser}, Would you like to see a status report? `);
-        }
-         else{
-            console.log(`Hello ${oneUser}, Thank you for logging in again`);
-         }
-         }
-        )
-    }
+// Using Currentuser Array
+let currentUser = ["Ali","Sana","Ahmad","Kamran","Zain"]
+// Create NewUser Array
+let newUser = ["Usman","Ali","Zain","Hussan","Adnan"]
+// Loop through new User check for avaiblility
+newUser .forEach(new_one_user =>{
+    // Making a condition for Username Already exist and save Ourcondition variable
+    let ourCondition = currentUser.some(currentUser => currentUser.toLowerCase() === new_one_user.toLowerCase())
+// print difffernt massge using If else statement 
+    if(ourCondition){
+console.log(`\n Sorry ${new_one_user} is already taken!\n`)
+ }
+ else{
+    console.log(`\n Welcome ${new_one_user} Username is available!\n`)
+ }
+})
